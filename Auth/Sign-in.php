@@ -4,13 +4,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Giriş Yap</title>
+    
     <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
     <link href="../assets/css/custom.css" rel="stylesheet">
     <style>
       
     </style>
   </head>
-  <body class="d-flex align-items-center py-4 ", style="background-color:rgb(219, 206, 246);"></body>
+  <body class="d-flex align-items-center py-4 ", style="background-color:rgb(215, 215, 227);"></body>
     <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
       <symbol id="check2" viewBox="0 0 16 16">
         <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"></path>
@@ -64,24 +65,28 @@
       </ul>
     </div>
     <main class="form-signin w-100 m-auto">
-      <form>
-        <img class="mb-4" src="../assets/images/logo1.png" alt="" width="300" height="250">
-        <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+<form id="sign-in-form" action="../_management/data-bridge/auth-login-ajax.php" method="post">
+          <img class="mb-4" src="../assets/images/logo2.png" alt="" width="300" height="180">
+        <h1 class="h4 mb-4 fw-bold text-center">Ay Oteline Hoşgeldiniz</h1>
         <div class="form-floating">
-          <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-          <label for="floatingInput">Email address</label>
+          <input type="email" class="form-control" id="floatingInput" name="email" placeholder="name@example.com" style="background-color:rgb(139, 160, 214)">
+          <label for="floatingInput">Email</label>
         </div>
         <div class="form-floating">
-          <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-          <label for="floatingPassword">Password</label>
+          <input type="password" class="form-control" id="floatingPassword" name="password" placeholder="Password" style="background-color:rgb(194, 205, 234)">
+          <label for="floatingPassword">Şifre</label>
         </div>
         <div class="form-check text-start my-3">
-          <input class="form-check-input" type="checkbox" value="remember-me" id="checkDefault">
-          <label class="form-check-label" for="checkDefault"> Remember me </label>
+          <input class="form-check-input" type="checkbox" value="Remember me" id="checkDefault">
+          <label class="form-check-label" for="checkDefault"> Beni hatırla </label>
         </div>
-        <button class="btn btn-primary w-100 py-2" type="submit">Sign in</button>
-        <p class="mt-5 mb-3 text-body-secondary">&copy; 2017–2025</p>
+        <button class="btn btn-primary w-100 py-2" type="submit" style="background-color:rgb(4, 12, 32)">Giriş yap</button>
+        <p class="mt-5 mb-3 text-body-secondary">&copy; 2025–2030</p>
       </form>
     </main>
+<script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/Auth.js"></script>
+</body>
 </html>

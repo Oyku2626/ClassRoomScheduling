@@ -65,8 +65,11 @@
       </ul>
     </div>
     <main class="form-signin w-100 m-auto">
-<form id="sign-in-form" action="../_management/data-bridge/auth-login-ajax.php" method="post">
-          <img class="mb-4" src="../assets/images/logo2.png" alt="" width="300" height="180">
+
+      <div class="card shadow p-4" style="max-width: 600px; width: 130%; background-color:rgb(127, 174, 255);">
+
+     <form id="sign-in-form" action="../_management/data-bridge/auth-login-ajax.php" method="post">
+          <img class="mb-4" src="../assets/images/logo2.png" alt="" width="300" height="180" style= "display: block; margin-left: auto; margin-right: auto;">
         <h1 class="h4 mb-4 fw-bold text-center">Ay Oteline Hoşgeldiniz</h1>
         <div class="form-floating">
           <input type="email" class="form-control" id="floatingInput" name="email" placeholder="name@example.com" style="background-color:rgb(139, 160, 214)">
@@ -81,7 +84,10 @@
           <label class="form-check-label" for="checkDefault"> Beni hatırla </label>
         </div>
         <button class="btn btn-primary w-100 py-2" type="submit" style="background-color:rgb(4, 12, 32)">Giriş yap</button>
-        <p class="mt-5 mb-3 text-body-secondary">&copy; 2025–2030</p>
+                  <p class="mt-3 mb-0 text-body-secondary text-center">Ay'a ilk inişiniz ise => <a href="Register.php">"Kayıt ol"</a></p>
+        <div id="responseMessage" class="text-center mt-2 small"></div>
+        <p class="mt-5 mb-3 text-body-secondary">&copy; 4045–4050</p>
+
       </form>
     </main>
 <script src="https://code.jquery.com/jquery-3.7.1.js"></script>

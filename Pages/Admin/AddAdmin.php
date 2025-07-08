@@ -31,14 +31,14 @@
     border-radius: 8px !important;
     padding: 10px 12px !important;
     border: 2px solidrgb(99, 160, 222);
-    background-color:rgb(117, 144, 241);
+    background-color:rgb(93, 124, 236);
     font-family: 'Cormorant Garamond', serif;
   }
 
   .btn-admin {
     background-color:rgb(140, 192, 244);
-    color: rgb(52, 75, 149);
-    border-color:rgb(60, 110, 220);
+    color: rgb(126, 149, 223);
+    border-color:rgb(137, 167, 233);
     font-size: 16px;
     font-family: inherit;
     font-weight: bold;
@@ -48,8 +48,8 @@
 
   .btn-admin:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 10px rgba(113, 155, 245, 0.3);
-    background: linear-gradient(to right,rgb(138, 159, 233),rgb(114, 124, 167));
+    box-shadow: 0 6px 10px rgba(76, 131, 242, 0.3);
+    background: linear-gradient(to right,rgb(122, 137, 190),rgb(114, 124, 167));
     color: #000;
     border: 2px solidrgb(133, 179, 232);
   }

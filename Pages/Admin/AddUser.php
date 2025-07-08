@@ -22,7 +22,7 @@
 
 <?php include '../../_layout/adminlayout/footer.php'; ?>
 
-<!-- 🧠 JavaScript kodunu footer'dan sonra buraya yaz! -->
+<!--  JavaScript kodunu footer'dan sonra buraya yaz! -->
 <script>
 $(document).ready(function () {
   console.log("jQuery hazır!");

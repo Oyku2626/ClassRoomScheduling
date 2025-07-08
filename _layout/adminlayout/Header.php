@@ -21,12 +21,12 @@ $page  = $route['page'];
     <!-- Admin Panel Stil Uyarlaması -->
     <style>
       body {
-        background-color: rgb(215, 215, 227) !important;
+        background-color: rgb(161, 161, 234) !important;
         font-family: 'Poppins', sans-serif !important;
       }
 
       .navbar, .offcanvas-header {
-        background-color: rgb(123, 153, 243) !important;
+        background-color: rgb(52, 70, 122) !important;
         color: rgb(215, 215, 227) !important;
       }
 
@@ -36,12 +36,12 @@ $page  = $route['page'];
       }
 
       .sidebar {
-        background-color: rgb(123, 153, 243) !important;
-        border-right: 2px solid rgb(95, 171, 237);
+        background-color: rgb(152, 64, 247) !important;
+        border-right: 2px solid rgb(97, 86, 150);
       }
 
       .sidebar .nav-link {
-        color: rgb(85, 157, 230);
+        color: rgb(207, 161, 237);
         padding: 12px 20px;
         font-size: 15px;
         font-family: 'Poppins', sans-serif;
@@ -77,15 +77,15 @@ $page  = $route['page'];
       }
 
       h1.h2 {
-        color: rgb(65, 128, 223);
+        color: rgb(127, 52, 189);
         font-family: 'Poppins', sans-serif;
         font-weight: 600;
       }
 
       .card {
-        background-color: rgb(67, 122, 234);
+        background-color: rgb(211, 179, 234);
         border: none;
-        box-shadow: 0 4px 10px rgba(14, 12, 95, 0.2);
+        box-shadow: 0 4px 10px rgba(167, 54, 232, 0.2);
         font-family: 'Poppins', sans-serif;
       }
 

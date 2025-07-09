@@ -2,14 +2,14 @@
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
-    <title>Öğretim Üyesi Kayıt</title>
+    <title>Mürettebat Kayıt</title>
     <style>
         * {
             box-sizing: border-box;
         }
 
         body {
-            background:rgb(215, 215, 227);
+            background:url('../images/arkaplan2.jpg') no-repeat center center fixed;
             font-family: Arial, sans-serif;
             display: flex;
             align-items: center;
@@ -84,20 +84,20 @@
     <div class="register-container">
 <img class="mb-4" src="../assets/images/logo2.png" alt="" width="300" height="180"
      style="display: block; margin-left: auto; margin-right: auto;">
-        <h2>Ay Tatili Kayıt</h2>
+        <h2>Space Crew Registration</h2>
         <form id="registerForm">
-            <label>Ad Soyad</label>
+            <label>Name Surname</label>
             <input type="text" name="name" required>
 
             <label>E-posta</label>
             <input type="email" name="email" required>
 
-            <label>Şifre</label>
+            <label>Password</label>
             <input type="password" name="password" required>
 
-            <button type="submit">Kayıt Ol</button>
-            <h2>***İyi Tatiller Uzaylılar***</h2>
-        <p class="mt-3 mb-0 text-body-secondary text-center" style="text-align:center">Daha önce Ay'a ayak bastıysanız => <a href="Sign-in.php">"Giriş yap"</a></p>
+            <button type="submit">Register</button>
+            <h2>***Let's Go Crew***</h2>
+        <p class="mt-3 mb-0 text-body-secondary text-center" style="text-align:center"> If you have been to space before=> <a href="Sign-in.php">"Sign In"</a></p>
         <div id="responseMessage" class="text-center mt-2 small"></div>
 
         </form>

@@ -57,7 +57,7 @@ $page  = $route['page'];
       }
 
       .sidebar .nav-link:hover {
-        background: linear-gradient(to right, rgb(93, 137, 232), rgb(66, 136, 222));
+        background: linear-gradient(to right, rgb(126, 158, 227), rgb(131, 178, 236));
         color: #000;
         box-shadow: 0 4px 6px rgba(9, 34, 90, 0.1);
       }
@@ -121,12 +121,12 @@ $page  = $route['page'];
                     <ul class="nav flex-column">
                         <li class="nav-item">
                             <a class="nav-link d-flex align-items-center gap-2" href="../../Pages/Admin/AddUser.php">
-                                <i class="fas fa-user-plus"></i> Kullanıcı Ekle
+                                <i class="fas fa-user-plus"></i> Mürettebat Ekle
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link d-flex align-items-center gap-2" href="../../Pages/Admin/AddAdmin.php">
-                                <i class="fas fa-user-shield"></i> Admin Ekle
+                                <i class="fas fa-user-shield"></i> Baş Astronot Ekle
                             </a>
                         </li>
                         <li class="nav-item">

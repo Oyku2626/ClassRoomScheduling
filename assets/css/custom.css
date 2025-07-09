@@ -1,105 +1,95 @@
-html,
+/* === FONT === */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+/* === TEMEL STİLLER === */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
-  height: 100%;
+  height: 100vh;
+  background: url('../images/arkaplan2.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #0a0d17;
+  font-family: 'Orbitron', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
+/* === FORM KUTUSU === */
 .form-signin {
-  max-width: 330px;
-  padding: 1rem;
+  width: 100%;
+  max-width: 350px;
+  padding: 2rem;
+  background: rgba(10, 12, 35, 0.85); /* lacivert arka plan */
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 25px rgba(138, 180, 255, 0.15);
+  backdrop-filter: blur(8px);
 }
 
-.form-signin .form-floating:focus-within {
-  z-index: 2;
+/* === BAŞLIK === */
+.form-signin h1 {
+  font-size: 1.8rem;
+  color: #a40d6a;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 0 8px #240634;
 }
 
-.form-signin input[type="email"] {
-  margin-bottom: -1px;
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
-}
-
+/* === GİRİŞ ALANLARI === */
+.form-signin input[type="email"],
 .form-signin input[type="password"] {
-  margin-bottom: 10px;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #100808;
+  transition: all 0.3s ease;
 }
-.bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        user-select: none
-      }
 
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem
-        }
-      }
+.form-signin input:focus {
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-color: #8ab4ff;
+  box-shadow: 0 0 10px #8ab4ff;
+}
 
-      .b-example-divider {
-        width: 100%;
-        height: 3rem;
-        background-color: #0000001a;
-        border: solid rgba(0, 0, 0, .15);
-        border-width: 1px 0;
-        box-shadow: inset 0 .5em 1.5em #0000001a, inset 0 .125em .5em #00000026
-      }
+/* === PLACEHOLDER === */
+::placeholder {
+  color: #8b3e8f;
+  opacity: 0.8;
+}
 
-      .b-example-vr {
-        flex-shrink: 0;
-        width: 1.5rem;
-        height: 100vh
-      }
+/* === GİRİŞ BUTONU (Uzay Pembesi) === */
+.btn-submit {
+  width: 100%;
+  padding: 0.75rem;
+  background: linear-gradient(135deg, #a3768a, #bb89ae); /* uzay pembesi gradyan */
+  border: none;
+  color: #c479c7;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  box-shadow: 0 0 12px #ff6fd8;
+  transition: background 0.3s, box-shadow 0.3s;
+}
 
-      .bi {
-        vertical-align: -.125em;
-        fill: currentColor
-      }
+.btn-submit:hover {
+  background: linear-gradient(135deg, #d61a6f, #e255c5);
+  box-shadow: 0 0 16px #ffa1dd;
+}
 
-      .nav-scroller {
-        position: relative;
-        z-index: 2;
-        height: 2.75rem;
-        overflow-y: hidden
-      }
-
-      .nav-scroller .nav {
-        display: flex;
-        flex-wrap: nowrap;
-        padding-bottom: 1rem;
-        margin-top: -1px;
-        overflow-x: auto;
-        text-align: center;
-        white-space: nowrap;
-        -webkit-overflow-scrolling: touch
-      }
-
-      .btn-bd-primary {
-        --bd-violet-bg: #712cf9;
-        --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
-        --bs-btn-font-weight: 600;
-        --bs-btn-color: var(--bs-white);
-        --bs-btn-bg: var(--bd-violet-bg);
-        --bs-btn-border-color: var(--bd-violet-bg);
-        --bs-btn-hover-color: var(--bs-white);
-        --bs-btn-hover-bg: #6528e0;
-        --bs-btn-hover-border-color: #6528e0;
-        --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
-        --bs-btn-active-color: var(--bs-btn-hover-color);
-        --bs-btn-active-bg: #5a23c8;
-        --bs-btn-active-border-color: #5a23c8
-      }
-
-      .bd-mode-toggle {
-        z-index: 1500
-      }
-
-      .bd-mode-toggle .bi {
-        width: 1em;
-        height: 1em
-      }
-
-      .bd-mode-toggle .dropdown-menu .active .bi {
-        display: block !important
-      }
+/* === LOGO veya BAŞLIK EKSTRA === */
+.header-logo {
+  font-size: 2rem;
+  color: #270b22;
+  text-align: center;
+  margin-bottom: 1rem;
+  text-shadow: 0 0 12px #99b6e9;
+}

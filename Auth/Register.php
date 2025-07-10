@@ -2,67 +2,91 @@
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
-    <title>Mürettebat Kayıt</title>
+    <title>Crew Register</title>
     <style>
         * {
             box-sizing: border-box;
         }
 
-        body {
-            background:url('../images/arkaplan2.jpg') no-repeat center center fixed;
-            font-family: Arial, sans-serif;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            margin: 0;
-        }
+      body {
+    background: url('../assets/images/arkaplan2.jpg') no-repeat center center fixed;
+    background-size: cover;  /* Ekranı kaplaması için eklendi */
+    font-family: Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
 
-        .register-container {
-            background: rgb(139, 160, 214);
-            padding: 70px;
-            border-radius: 400px;
-            box-shadow: 0 0 15px rgba(143, 10, 21, 0.1);
-            width: 130%;
-            max-width: 600px;
-            
-        }
 
-        h2 {
-            text-align: center;
-            margin-bottom: 20px;
-            color: #333;
-        }
+     .register-container {
+    background: linear-gradient(135deg, #1a1a40, #3b2f5c); /* Koyu gece mavisi ve mor geçiş */
+    padding: 60px 40px;
+    border-radius: 40px; /* Çok büyük radius'u biraz küçülttüm */
+    box-shadow: 0 0 20px rgba(138, 180, 255, 0.5); /* Uzay temalı mavi parıltı */
+    width: 100%;
+    max-width: 600px;
+    color: #cdd3e7; /* Açık mor-mavi yazı rengi */
+    font-family: 'Orbitron', sans-serif;
+}
 
-        label {
-            display: block;
-            margin-bottom: 5px;
-            color: #555;
-        }
+h2 {
+    text-align: center;
+    margin-bottom: 25px
+    color: #bb89ae; /* Uzay pembesi */
+    text-shadow: 0 0 8px #d61a6f;
+    font-weight: 700;
+}
 
-        input {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 15px;
-            border: 1px solid #ccc;
-            border-radius: 8px;
-        }
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #99a9c9; /* Açık soğuk mavi-mor ton */
+    font-weight: 500;
+}
 
-        button {
-            width: 100%;
-            padding: 12px;
-            background-color:rgb(103, 49, 91);
-            color: white;
-            font-weight: bold;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
+input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 18px;
+    border: 2px solid rgba(171, 106, 142, 0.7);
+    border-radius: 8px;
+    background-color: rgba(93, 124, 236, 0.15);
+    color: #cdd3e7;
+    font-family: 'Orbitron', sans-serif;
+    transition: all 0.3s ease;
+}
 
-        button:hover {
-            background-color:rgb(101, 23, 137);
-        }
+input:focus {
+    outline: none;
+    border-color: #d61a6f;
+    box-shadow: 0 0 8px #ff6fd8;
+    background-color: rgba(93, 124, 236, 0.3);
+    color: #fff;
+}
+
+button {
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(135deg, #a3768a, #bb89ae); /* Uzay pembesi gradyan */
+    color: #c479c7;
+    font-weight: 700;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 0 #8b3e8f;
+    transition: all 0.3s ease-in-out;
+    font-family: 'Orbitron', sans-serif;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #d61a6f, #e255c5);
+    box-shadow: 0 6px 10px rgba(255, 105, 210, 0.6);
+    color: #fff;
+    transform: translateY(-2px);
+}
+
 
         .error, .success {
             text-align: center;
@@ -82,8 +106,7 @@
 </head>
 <body>
     <div class="register-container">
-<img class="mb-4" src="../assets/images/logo2.png" alt="" width="300" height="180"
-     style="display: block; margin-left: auto; margin-right: auto;">
+
         <h2>Space Crew Registration</h2>
         <form id="registerForm">
             <label>Name Surname</label>

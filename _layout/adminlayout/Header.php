@@ -20,84 +20,96 @@ $page  = $route['page'];
 
     <!-- Admin Panel Stil Uyarlaması -->
     <style>
-      body {
-        background-color: rgb(161, 161, 234) !important;
-        font-family: 'Poppins', sans-serif !important;
-      }
+     /* Admin Panel Stil Uyarlaması - Orbitron & Uzay Teması */
 
-      .navbar, .offcanvas-header {
-        background-color: rgb(52, 70, 122) !important;
-        color: rgb(215, 215, 227) !important;
-      }
+body {
+  background-color: #0a0c23 !important; /* Koyu uzay mavisi */
+  font-family: 'Orbitron', sans-serif !important;
+  color: #cdd3e7; /* Açık mor-mavi yazı */
+}
 
-      .navbar-brand {
-        font-family: 'Poppins', sans-serif;
-        font-weight: 700;
-      }
+.navbar, .offcanvas-header {
+  background: linear-gradient(135deg, #a3768a, #bb89ae) !important; /* Uzay pembesi gradyan */
+  color: #c479c7 !important; /* Pembe yazı */
+  box-shadow: 0 0 12px #ff6fd8;
+  font-weight: 700;
+}
 
-      .sidebar {
-        background-color: rgb(152, 64, 247) !important;
-        border-right: 2px solid rgb(97, 86, 150);
-      }
+.navbar-brand {
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 700;
+  color: #ff7ddb !important;
+  text-shadow: 0 0 8px #d61a6f;
+}
 
-      .sidebar .nav-link {
-        color: rgb(207, 161, 237);
-        padding: 12px 20px;
-        font-size: 15px;
-        font-family: 'Poppins', sans-serif;
-        font-weight: 500;
-        border-radius: 8px;
-        margin: 6px 12px;
-        transition: all 0.3s ease;
-      }
+.sidebar {
+  background: rgba(10, 12, 35, 0.85) !important; /* Transparan koyu arka plan */
+  border-right: 2px solid #bb89ae;
+  color: #c479c7;
+  font-family: 'Orbitron', sans-serif;
+}
 
-      .sidebar .nav-link i {
-        color: rgb(89, 143, 215);
-        transition: color 0.3s ease;
-      }
+.sidebar .nav-link {
+  color: #c479c7;
+  padding: 12px 20px;
+  font-size: 15px;
+  font-weight: 500;
+  border-radius: 8px;
+  margin: 6px 12px;
+  transition: all 0.3s ease;
+}
 
-      .sidebar .nav-link:hover {
-        background: linear-gradient(to right, rgb(126, 158, 227), rgb(131, 178, 236));
-        color: #000;
-        box-shadow: 0 4px 6px rgba(9, 34, 90, 0.1);
-      }
+.sidebar .nav-link i {
+  color: #a3768a;
+  transition: color 0.3s ease;
+}
 
-      .sidebar .nav-link:hover i {
-        color: #000;
-      }
+.sidebar .nav-link:hover {
+  background: linear-gradient(135deg, #d61a6f, #e255c5);
+  color: #fff;
+  box-shadow: 0 0 16px #ffa1dd;
+}
 
-      .sidebar .nav-link.text-danger {
-        color: rgb(8, 11, 110) !important;
-      }
+.sidebar .nav-link:hover i {
+  color: #fff;
+}
 
-      .sidebar .nav-link.text-danger:hover {
-        background-color: rgba(163, 58, 58, 0.1);
-        box-shadow: 0 4px 6px rgba(163, 58, 58, 0.15);
-        color: #000 !important;
-      }
+.sidebar .nav-link.text-danger {
+  color: #ff6fd8 !important;
+}
 
-      h1.h2 {
-        color: rgb(127, 52, 189);
-        font-family: 'Poppins', sans-serif;
-        font-weight: 600;
-      }
+.sidebar .nav-link.text-danger:hover {
+  background-color: rgba(214, 26, 111, 0.2);
+  box-shadow: 0 0 16px rgba(255, 105, 210, 0.5);
+  color: #fff !important;
+}
 
-      .card {
-        background-color: rgb(211, 179, 234);
-        border: none;
-        box-shadow: 0 4px 10px rgba(167, 54, 232, 0.2);
-        font-family: 'Poppins', sans-serif;
-      }
+h1.h2 {
+  color: #bb89ae;
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 700;
+  text-shadow: 0 0 10px #d61a6f;
+}
 
-      .card-title {
-        color: rgb(72, 122, 231);
-        font-weight: 600;
-      }
+.card {
+  background: rgba(10, 12, 35, 0.85);
+  border: none;
+  box-shadow: 0 0 25px rgba(138, 180, 255, 0.3);
+  font-family: 'Orbitron', sans-serif;
+  color: #cdd3e7;
+}
 
-      .card-text {
-        font-size: 1.5rem;
-        color: #000;
-      }
+.card-title {
+  color: #ffa1dd;
+  font-weight: 700;
+  text-shadow: 0 0 8px #ff6fd8;
+}
+
+.card-text {
+  font-size: 1.5rem;
+  color: #cdd3e7;
+}
+
     </style>
 </head>
 
@@ -121,22 +133,22 @@ $page  = $route['page'];
                     <ul class="nav flex-column">
                         <li class="nav-item">
                             <a class="nav-link d-flex align-items-center gap-2" href="../../Pages/Admin/AddUser.php">
-                                <i class="fas fa-user-plus"></i> Mürettebat Ekle
+                                <i class="fas fa-user-plus"></i> Add Crew
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link d-flex align-items-center gap-2" href="../../Pages/Admin/AddAdmin.php">
-                                <i class="fas fa-user-shield"></i> Baş Astronot Ekle
+                                <i class="fas fa-user-shield"></i> Commander Astronaut
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link d-flex align-items-center gap-2" href="../../Pages/Admin/NewReservation.php">
-                                <i class="fas fa-calendar-plus"></i> Yeni Rezervasyon
+                                <i class="fas fa-calendar-plus"></i> New Reservation
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link d-flex align-items-center gap-2" href="../../Pages/Admin/Reservations.php">
-                                <i class="fas fa-calendar-check"></i> Rezervasyonlar
+                                <i class="fas fa-calendar-check"></i> Rezervations
                             </a>
                         </li>
                     </ul>
@@ -144,12 +156,12 @@ $page  = $route['page'];
                     <ul class="nav flex-column mb-auto">
                         <li class="nav-item">
                             <a class="nav-link d-flex align-items-center gap-2" href="../../Pages/Admin/Home.php">
-                                <i class="fas fa-house"></i> Ana Sayfa
+                                <i class="fas fa-house"></i> Home Page
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link d-flex align-items-center gap-2 text-danger" href="../../Auth/Logout.php">
-                                <i class="fas fa-right-from-bracket"></i> Çıkış
+                                <i class="fas fa-right-from-bracket"></i> Log out
                             </a>
                         </li>
                     </ul>
@@ -162,3 +174,4 @@ $page  = $route['page'];
             <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
                 <h1 class="h2"><?= htmlspecialchars($page) ?></h1>
             </div>
+            

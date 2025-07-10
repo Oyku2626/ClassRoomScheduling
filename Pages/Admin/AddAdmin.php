@@ -3,56 +3,71 @@
 <div class="row justify-content-center">
   <div class="col-md-6 col-xl-5">
     <div class="card p-4 mt-4 mb-5 shadow-sm">
-      <h3 class="text-center mb-4" style="color:#715A3A; font-family:'Cormorant Garamond', serif;">Yeni Admin Ekle</h3>
+      <h3 class="text-center mb-4" style="color:rgb(222, 29, 196);" font-family:'Cormorant Garamond', serif;">Add New Commander Astronaut</h3>
       <form id="addAdminForm">
         <div class="form-floating mb-3">
           <input type="text" class="form-control" id="name" name="name" placeholder="Ad Soyad" required>
-          <label for="name">Ad Soyad</label>
+          <label for="name"style="color:rgb(222, 29, 196);">Name Surname </label>
         </div>
 
         <div class="form-floating mb-3">
           <input type="email" class="form-control" id="email" name="email" placeholder="E-posta" required>
-          <label for="email">E-posta</label>
+          <label for="email"style="color:rgb(222, 29, 196);">E-posta</label>
         </div>
 
         <div class="form-floating mb-4">
-          <input type="password" class="form-control" id="password" name="password" placeholder="Şifre" required>
-          <label for="password">Şifre</label>
+          <input type="password" class="form-control" style="color:rgb(222, 29, 196);" id="password" name="password" placeholder="Şifre" required>
+          <label for="password"style="color:rgb(222, 29, 196);">Password</label>
         </div>
         <input type="hidden" value="<?= $_SESSION["auth"]["token"];?>" id="token" />
-        <button class="btn btn-admin w-100 py-2" type="submit">Admin Olarak Ekle</button>
+        <button class="btn btn-admin w-100 py-2" type="submit" style="color:rgb(222, 29, 196);">Add Commander Astronaut </button>
       </form>
     </div>
   </div>
 </div>
 
 <style>
+  
   .form-control {
-    border-radius: 8px !important;
-    padding: 10px 12px !important;
-    border: 2px solidrgb(99, 160, 222);
-    background-color:rgb(93, 124, 236);
-    font-family: 'Cormorant Garamond', serif;
-  }
+  border-radius: 8px !important;
+  padding: 10px 12px !important;
+ border: 2px solid rgb(171, 106, 142);
+    background-color: rgba(138, 72, 230, 0.15);
+  font-family: 'Orbitron', sans-serif; /* Temaya uygun font */
+  color: #cdd3e7; /* Açık renk yazı */
+  transition: all 0.3s ease;
+}
 
-  .btn-admin {
-    background-color:rgb(140, 192, 244);
-    color: rgb(126, 149, 223);
-    border-color:rgb(137, 167, 233);
-    font-size: 16px;
-    font-family: inherit;
-    font-weight: bold;
-    box-shadow: 0 4px 0rgb(7, 35, 91);
-    transition: all 0.3s ease-in-out;
-  }
+.form-control:focus {
+  outline: none;
+  border-color: #d61a6f; /* Canlı pembe odak rengi */
+  box-shadow: 0 0 8px #ff6fd8;
+  background-color: rgba(93, 124, 236, 0.3);
+  color: #fff;
+}
 
-  .btn-admin:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 10px rgba(76, 131, 242, 0.3);
-    background: linear-gradient(to right,rgb(122, 137, 190),rgb(114, 124, 167));
-    color: #000;
-    border: 2px solidrgb(133, 179, 232);
-  }
+.btn-admin {
+  background: linear-gradient(135deg, #a3768a, #bb89ae); /* Uzay pembesi gradyan */
+  color: #c479c7;
+  border: 2px solid #bb89ae;
+  font-size: 16px;
+  font-family: 'Orbitron', sans-serif;
+  font-weight: bold;
+  box-shadow: 0 4px 0 #8b3e8f;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  border-radius: 8px;
+  padding: 10px 20px;
+}
+
+.btn-admin:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 10px rgba(255, 105, 210, 0.5);
+  background: linear-gradient(135deg, #d61a6f, #e255c5);
+  color: #fff;
+  border: 2px solid #ff6fd8;
+}
+
 </style>
 
 <script>

@@ -2,8 +2,8 @@
 
 <div class="row justify-content-center">
   <div class="col-md-6 col-xl-5">
-    <div class="card p-4 mt-4 mb-5 shadow-sm">
-      <h3 class="text-center mb-4" style="color:rgb(222, 29, 196);" font-family:'Cormorant Garamond', serif;">Add New Commander Astronaut</h3>
+    <div class="card p-4 mt-4 mb-5 shadow-sm" style="background-color: rgba(60, 18, 90, 0.7)";>
+      <h3 class="text-center mb-4" style="color: #ffd6fa;" font-family:'Cormorant Garamond', serif;">Add New Commander Astronaut</h3>
       <form id="addAdminForm">
         <div class="form-floating mb-3">
           <input type="text" class="form-control" id="name" name="name" placeholder="Ad Soyad" required>
@@ -32,7 +32,7 @@
   border-radius: 8px !important;
   padding: 10px 12px !important;
  border: 2px solid rgb(171, 106, 142);
-    background-color: rgba(138, 72, 230, 0.15);
+   background-color: rgba(93, 124, 236, 0.15);;
   font-family: 'Orbitron', sans-serif; /* Temaya uygun font */
   color: #cdd3e7; /* Açık renk yazı */
   transition: all 0.3s ease;
@@ -47,13 +47,13 @@
 }
 
 .btn-admin {
-  background: linear-gradient(135deg, #a3768a, #bb89ae); /* Uzay pembesi gradyan */
+  background: linear-gradient(135deg,rgb(136, 85, 218),rgb(136, 85, 218)));
   color: #c479c7;
   border: 2px solid #bb89ae;
   font-size: 16px;
   font-family: 'Orbitron', sans-serif;
   font-weight: bold;
-  box-shadow: 0 4px 0 #8b3e8f;
+ box-shadow: 0 4px 0 rgb(204, 177, 247);
   cursor: pointer;
   transition: all 0.3s ease-in-out;
   border-radius: 8px;
@@ -63,7 +63,7 @@
 .btn-admin:hover {
   transform: translateY(-2px);
   box-shadow: 0 6px 10px rgba(255, 105, 210, 0.5);
-  background: linear-gradient(135deg, #d61a6f, #e255c5);
+  background: linear-gradient(135deg,rgb(136, 85, 218),rgb(136, 85, 218)));
   color: #fff;
   border: 2px solid #ff6fd8;
 }

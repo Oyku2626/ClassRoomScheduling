@@ -80,13 +80,13 @@ $(document).ready(function () {
   }
 
   .btn-admin {
-    background: linear-gradient(135deg, #a3768a, #bb89ae);
+    background: linear-gradient(135deg,rgb(136, 85, 218),rgb(136, 85, 218)));
     color: #fff;
     border: 2px solid #bb89ae;
     font-size: 16px;
     font-family: 'Orbitron', sans-serif;
     font-weight: bold;
-    box-shadow: 0 4px 0 #8b3e8f;
+     box-shadow: 0 4px 0 rgb(204, 177, 247);
     cursor: pointer;
     transition: all 0.3s ease-in-out;
     border-radius: 8px;
@@ -96,7 +96,7 @@ $(document).ready(function () {
   .btn-admin:hover {
     transform: translateY(-2px);
     box-shadow: 0 6px 10px rgba(255, 105, 210, 0.5);
-    background: linear-gradient(135deg, #d61a6f, #e255c5);
+    background: linear-gradient(135deg,rgb(136, 85, 218),rgb(136, 85, 218)));
     border: 2px solid #ff6fd8;
   }
 </style>

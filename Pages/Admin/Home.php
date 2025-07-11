@@ -2,7 +2,7 @@
 // Üst kısım: header
 include '../../_layout/adminlayout/header.php';
 
-// Doğru bağlantı yolu: 4 klasör yukarı çık, sonra room_scheduler/db_test.php
+// Doğru bağlantı yolu: 4 klasör yukarı çık, sonra room-scheduler/dbo_test.php
 include '../../../room-scheduler/dbo_test.php'; // ← VERİTABANI BAĞLANTISI BURADA
 
 // Veritabanından sayılar

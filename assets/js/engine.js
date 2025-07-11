@@ -77,7 +77,7 @@
       dataType: 'json',
       success: function (data) {
         const select = $('#lecturer_id');
-        select.append('<option value="">İsim Seçin</option>');
+        select.append('<option value="">Select Name</option>');
         data.forEach(function (item) {
           select.append(`<option value="${item.id}">${item.name}</option>`);
         });
@@ -94,7 +94,7 @@
       dataType: 'json',
       success: function (data) {
         const select = $('#room_id');
-        select.append('<option value=""> Yer Seçin </option>');
+        select.append('<option value=""> Select Planet</option>');
         data.forEach(function (item) {
           select.append(`<option value="${item.id}">${item.name}</option>`);
         });
@@ -117,7 +117,7 @@
     };
     const token = $('#token').val();
     $.ajax({
-      url: '/room_scheduler/reservations.php',
+      url: '/room-scheduler/reservations.php',
       type: 'POST',
       contentType: 'application/json',
       data: JSON.stringify(data),

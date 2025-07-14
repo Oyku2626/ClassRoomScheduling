@@ -3,90 +3,112 @@
 <head>
     <meta charset="UTF-8">
     <title>Crew Register</title>
+
+    <!-- Orbitron Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+
     <style>
         * {
             box-sizing: border-box;
+            margin: 0;
+            padding: 0;
         }
 
-      body {
-    background: url('../assets/images/arkaplan2.jpg') no-repeat center center fixed;
-    background-size: cover;  /* Ekranı kaplaması için eklendi */
-    font-family: Arial, sans-serif;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    margin: 0;
-}
+        body {
+            background: url('../assets/images/arkaplan2.jpg') no-repeat center center fixed;
+            background-size: cover;
+            font-family: 'Orbitron', sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            color: #cdd3e7;
+        }
 
+        .register-container {
+            background: rgba(19, 20, 66, 0.85);
+            padding: 60px 40px;
+            border-radius: 20px;
+            box-shadow: 0 0 25px rgba(138, 180, 255, 0.15);
+            backdrop-filter: blur(8px);
+            width: 100%;
+            max-width: 450px;
+        }
 
-     .register-container {
-    background: linear-gradient(135deg, #1a1a40, #3b2f5c); /* Koyu gece mavisi ve mor geçiş */
-    padding: 60px 40px;
-    border-radius: 40px; /* Çok büyük radius'u biraz küçülttüm */
-    box-shadow: 0 0 20px rgba(138, 180, 255, 0.5); /* Uzay temalı mavi parıltı */
-    width: 100%;
-    max-width: 600px;
-    color: #cdd3e7; /* Açık mor-mavi yazı rengi */
-    font-family: 'Orbitron', sans-serif;
-}
+        h1 {
+            text-align: center;
+            margin-bottom: 25px;
+            font-size: 1.8rem;
+            color: #a40d6a;
+            text-shadow: 0 0 8px #240634;
+        }
 
-h2 {
-    text-align: center;
-    margin-bottom: 25px
-    color: #bb89ae; /* Uzay pembesi */
-    text-shadow: 0 0 8px #d61a6f;
-    font-weight: 700;
-}
+        h2 {
+            text-align: center;
+            margin: 20px 0;
+            color: #c8c1ecff;
+            text-shadow: 2px 2px 4px rgba(244, 238, 246, 0.5);
+        }
 
-label {
-    display: block;
-    margin-bottom: 8px;
-    color: #99a9c9; /* Açık soğuk mavi-mor ton */
-    font-weight: 500;
-}
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #cc0fadff;
+            font-weight: 500;
+        }
 
-input {
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 18px;
-    border: 2px solid rgba(171, 106, 142, 0.7);
-    border-radius: 8px;
-    background-color: rgba(93, 124, 236, 0.15);
-    color: #cdd3e7;
-    font-family: 'Orbitron', sans-serif;
-    transition: all 0.3s ease;
-}
+        input {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 18px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 6px;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: #100808;
+            transition: all 0.3s ease;
+            font-family: 'Orbitron', sans-serif;
+        }
 
-input:focus {
-    outline: none;
-    border-color: #d61a6f;
-    box-shadow: 0 0 8px #ff6fd8;
-    background-color: rgba(93, 124, 236, 0.3);
-    color: #fff;
-}
+        input:focus {
+            outline: none;
+            background-color: rgba(255, 255, 255, 0.2);
+            border-color: #8ab4ff;
+            box-shadow: 0 0 10px #8ab4ff;
+            color: white;
+        }
 
-button {
-    width: 100%;
-    padding: 14px;
-    background: linear-gradient(135deg, #a3768a, #bb89ae); /* Uzay pembesi gradyan */
-    color: #c479c7;
-    font-weight: 700;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    box-shadow: 0 4px 0 #8b3e8f;
-    transition: all 0.3s ease-in-out;
-    font-family: 'Orbitron', sans-serif;
-}
+        button {
+            width: 100%;
+            padding: 14px;
+            background: linear-gradient(135deg, #780a3bff, #741059ff);
+            color: #c479c7;
+            font-weight: 700;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            box-shadow: 0 0 12px #ff6fd8;
+            transition: all 0.3s ease-in-out;
+            font-family: 'Orbitron', sans-serif;
+        }
 
-button:hover {
-    background: linear-gradient(135deg, #d61a6f, #e255c5);
-    box-shadow: 0 6px 10px rgba(255, 105, 210, 0.6);
-    color: #fff;
-    transform: translateY(-2px);
-}
+        button:hover {
+            background: linear-gradient(135deg, #d61a6f, #e255c5);
+            box-shadow: 0 0 16px #ffa1dd;
+            color: #fff;
+            transform: translateY(-2px);
+        }
 
+        p {
+            text-align: center;
+            color: #ff69b4;
+            margin-top: 1rem;
+        }
+
+        a {
+            color: #d61a6f;
+            font-weight: bold;
+            text-decoration: none;
+        }
 
         .error, .success {
             text-align: center;
@@ -101,13 +123,12 @@ button:hover {
         .success {
             color: green;
         }
-        
     </style>
 </head>
 <body>
     <div class="register-container">
+        <h1>Space Crew Registration</h1>
 
-        <h2>Space Crew Registration</h2>
         <form id="registerForm">
             <label>Name Surname</label>
             <input type="text" name="name" required>
@@ -118,13 +139,17 @@ button:hover {
             <label>Password</label>
             <input type="password" name="password" required>
 
-            <button type="submit">Register</button>
-            <h2>***Let's Go Crew***</h2>
-        <p class="mt-3 mb-0 text-body-secondary text-center" style="text-align:center"> If you have been to space before=> <a href="Sign-in.php">"Sign In"</a></p>
-        <div id="responseMessage" class="text-center mt-2 small"></div>
+            <button type="submit" style="color:rgba(237, 231, 237, 1);">Register</button>
 
+            <h2>*** Let's Go Crew ***</h2>
+
+            <p>
+                If you have been to space before: 
+                <a href="Sign-in.php">"Sign In"</a>
+            </p>
+
+            <div id="responseMessage" class="text-center mt-2 small"></div>
         </form>
-        <div id="responseMessage"></div>
     </div>
 
     <script>
@@ -141,8 +166,8 @@ button:hover {
             });
 
             const result = await response.json();
-
             const messageDiv = document.getElementById('responseMessage');
+
             messageDiv.className = '';
             messageDiv.textContent = result.message;
 

@@ -1,6 +1,6 @@
 <?php include '../../_layout/userlayout/header.php'; ?>
 <link href="https://cdn.datatables.net/2.3.2/css/dataTables.dataTables.css" rel="stylesheet">
-<input id="userId" type="hidden" value="<?= $_SESSION["auth"]["id"];?>">
+<input id="UserId" type="hidden" value="<?= $_SESSION["auth"]["id"];?>">
 <div class="table-responsive">
     <table id="example" class="display table table-bordered">
         <thead>

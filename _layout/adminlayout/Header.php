@@ -131,10 +131,19 @@ h1.h2 {
                 </div>
                 <div class="offcanvas-body d-md-flex flex-column p-0 pt-lg-3 overflow-y-auto min-vh-100">
                     <ul class="nav flex-column">
+                      </ul>
+                    <hr class="my-3">
+                    <ul class="nav flex-column mb-auto">
+                        <li class="nav-item">
+                            <a class="nav-link d-flex align-items-center gap-2" href="../../Pages/Admin/Home.php">
+                                <i class="fas fa-house"></i> Home Page
+                                  
+                            </a>
                         <li class="nav-item">
                             <a class="nav-link d-flex align-items-center gap-2" href="../../Pages/Admin/AddUser.php">
                                 <i class="fas fa-user-plus"></i> Add Crew
                             </a>
+                            
                         </li>
                         <li class="nav-item">
                             <a class="nav-link d-flex align-items-center gap-2" href="../../Pages/Admin/AddAdmin.php">
@@ -151,13 +160,7 @@ h1.h2 {
                                 <i class="fas fa-calendar-check"></i> Rezervations
                             </a>
                         </li>
-                    </ul>
-                    <hr class="my-3">
-                    <ul class="nav flex-column mb-auto">
-                        <li class="nav-item">
-                            <a class="nav-link d-flex align-items-center gap-2" href="../../Pages/Admin/Home.php">
-                                <i class="fas fa-house"></i> Home Page
-                            </a>
+                    
                         </li>
                         <li class="nav-item">
                             <a class="nav-link d-flex align-items-center gap-2 text-danger" href="../../Auth/Logout.php">

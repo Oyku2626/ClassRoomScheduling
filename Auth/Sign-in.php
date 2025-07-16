@@ -1,3 +1,16 @@
+<?php
+session_start();
+if (isset($_SESSION['auth']['userType'])) {
+    // Zaten giriş yapılmışsa rolüne göre ana sayfaya yönlendir
+    $userType = $_SESSION['auth']['userType'];
+    if ($userType === 'admin') {
+        header('Location: /ClassroomScheduling/Pages/Admin/Home.php');
+    } else {
+        header('Location: /ClassroomScheduling/Pages/User/Home.php');
+    }
+    exit;
+}
+?>
 <!DOCTYPE html>
 <html lang="tr">
 <head>
@@ -8,6 +21,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
 
   <style>
+    /* Stil kodlarını olduğu gibi bırakıyorum */
     * {
       box-sizing: border-box;
       margin: 0;
@@ -25,12 +39,12 @@
       color: #cdd3e7;
     }
     
-        h2 {
-            text-align: center;
-            margin: 20px 0;
-            color: #c8c1ecff;
-            text-shadow: 2px 2px 4px rgba(244, 238, 246, 0.5);
-        }
+    h2 {
+        text-align: center;
+        margin: 20px 0;
+        color: #c8c1ecff;
+        text-shadow: 2px 2px 4px rgba(244, 238, 246, 0.5);
+    }
 
     .signin-container {
       background: rgba(19, 20, 66, 0.85);
@@ -144,21 +158,21 @@
 
     <form id="signInForm" action="../_management/data-bridge/auth-login-ajax.php" method="post">
       <label>Email</label>
-      <input class="text"type="email" name="email" required>
+      <input class="text" type="email" name="email" required>
 
       <label>Password</label>
       <input class="text" type="password" name="password" required>
 
-        <input class="form-check" type="checkbox" id="rememberMe" name="remember" style="float:left">
-        <label for="rememberMe">Remember Me</label>
+      <input class="form-check" type="checkbox" id="rememberMe" name="remember" style="float:left">
+      <label for="rememberMe">Remember Me</label>
 
       <button type="submit" style="color:rgba(237, 231, 237, 1);" >Sign In</button>
 
       <h2> ** Have a Good Journey **</h2>
- 
+
       <p>
         If this is your first time in space:
-        <a href="Register.php">"Register"</a>
+        <a href="Register.php">Register</a>
       </p>
 
       <div id="responseMessage" class="text-center mt-2 small"></div>
@@ -169,30 +183,30 @@
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script>
-    // Eğer giriş başarısına göre işlem yapılacaksa bu kısım genişletilebilir
     $('#signInForm').on('submit', function (e) {
       e.preventDefault();
 
       $.ajax({
         url: $(this).attr('action'),
         type: 'POST',
+        dataType: 'json',  // JSON olarak alıyoruz
         data: $(this).serialize(),
         success: function (response) {
           const messageDiv = $('#responseMessage');
-          messageDiv.removeClass().text(response.message);
+          messageDiv.removeClass('error success').text(response.message);
 
           if (response.status === 'success') {
             messageDiv.addClass('success');
-          
+
             setTimeout(() => {
-              window.location.href = '/ClassroomScheduling/Pages/User/Home.php';
+              window.location.href = response.redirect || '/ClassroomScheduling/Pages/User/Home.php';
             }, 1000);
           } else {
             messageDiv.addClass('error');
           }
         },
         error: function () {
-          $('#responseMessage').removeClass().addClass('error').text('An error occurred.');
+          $('#responseMessage').removeClass('success').addClass('error').text('An error occurred.');
         }
       });
     });

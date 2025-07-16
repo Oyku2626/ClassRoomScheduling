@@ -5,18 +5,19 @@ require_once '../../../room-scheduler/dbo_test.php';
 $sql = "SELECT rr.id, rr.date, rr.start_time, rr.end_time, rr.status, rr.created_at, 
                l.name AS lecturer_name, r.name AS room_name
         FROM room_reservations rr
-        JOIN lecturers l ON rr.lecturer_id = l.id
+        LEFT JOIN lecturers l ON rr.lecturer_id = l.id
         JOIN rooms r ON rr.room_id = r.id
         ORDER BY rr.created_at DESC";
 $stmt = $pdo->query($sql);
 $reservations = $stmt->fetchAll(PDO::FETCH_ASSOC);
-?> <style>
+?> 
+<style>
   .reservations-table {
     width: 90%;
     margin: 30px auto;
     border-collapse: collapse;
-    background: #fffafc;
-    box-shadow: 0 4px 16px rgba(243, 122, 160, 0.2);
+    background-color: rgba(60, 10, 100, 0.45);
+    box-shadow: 0 0 25px rgba(255, 105, 210, 0.3);
     border-radius: 16px;
     overflow: hidden;
   }
@@ -25,37 +26,37 @@ $reservations = $stmt->fetchAll(PDO::FETCH_ASSOC);
   .reservations-table td {
     padding: 12px 15px;
     text-align: left;
-    border-bottom: 1px solid #f9c5d1;
+    border-bottom: 1px solid #e4b8ebff;
   }
 
   .reservations-table thead {
-    background-color: #f9c5d1;
+   background-color: rgba(60, 10, 100, 0.45);
     color: #4a4a4a;
   }
 
   .reservations-table tbody tr:hover {
-    background-color: #fce4ec;
+    background-color: #674d6eff;
   }
 
   h2.title {
     text-align: center;
-    color: #f37aa0;
+     color: #ffd6fa;
     margin-top: 40px;
     margin-bottom: 20px;
   }
 </style>
-<h2 class="title">Rezervasyon Listesi</h2>
+<h2 class="title">Rezervations</h2>
 <table class="reservations-table">
-  <thead>
+  <thead style="color:rgb(222, 29, 196);">
     <tr>
       <th>ID</th>
-      <th>Akademisyen</th>
-      <th>Oda</th>
-      <th>Tarih</th>
-      <th>Başlangıç</th>
-      <th>Bitiş</th>
-      <th>Durum</th>
-      <th>Oluşturulma</th>
+      <th>CREW</th>
+      <th>PLANET</th>
+      <th>DATE</th>
+      <th>START TIME</th>
+      <th>END TIME</th>
+      <th>STATUS</th>
+      <th>CREATED AT</th>
     </tr>
   </thead>
   <tbody> <?php foreach ($reservations as $reservation): ?> <tr>

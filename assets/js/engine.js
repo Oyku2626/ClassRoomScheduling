@@ -86,7 +86,7 @@ Engine.AdminNewReservation = function (){
       dataType: 'json',
       success: function (data) {
         const select = $('#lecturer_id');
-        select.append('<option value="">-- Hoca Seçin --</option>');
+        select.append('<option value="">-- CREW --</option>');
         data.forEach(function (item) {
           select.append(`<option value="${item.id}">${item.name}</option>`);
         });
@@ -103,7 +103,7 @@ Engine.AdminNewReservation = function (){
       dataType: 'json',
       success: function (data) {
         const select = $('#room_id');
-        select.append('<option value="">-- Yer Seçin --</option>');
+        select.append('<option value="">-- PLANET --</option>');
         data.forEach(function (item) {
           select.append(`<option value="${item.id}">${item.name}</option>`);
         });
@@ -170,7 +170,7 @@ Engine.UserNewReservation = function (){
       dataType: 'json',
       success: function (data) {
         const select = $('#lecturer_id');
-        select.append('<option value="">-- Hoca Seçin --</option>');
+        select.append('<option value="">-- CREW --</option>');
         data.forEach(function (item) {
           select.append(`<option value="${item.id}">${item.name}</option>`);
         });
@@ -187,7 +187,7 @@ Engine.UserNewReservation = function (){
       dataType: 'json',
       success: function (data) {
         const select = $('#room_id');
-        select.append('<option value="">-- Yer Seçin --</option>');
+        select.append('<option value="">-- PLANET --</option>');
         data.forEach(function (item) {
           select.append(`<option value="${item.id}">${item.name}</option>`);
         });
@@ -254,7 +254,7 @@ Engine.UserMyReservations = function (){
       dataType: 'json',
       success: function (data) {
         const select = $('#lecturer_id');
-        select.append('<option value="">-- Hoca Seçin --</option>');
+        select.append('<option value="">-- CREW --</option>');
         data.forEach(function (item) {
           select.append(`<option value="${item.id}">${item.name}</option>`);
         });
@@ -271,7 +271,7 @@ Engine.UserMyReservations = function (){
       dataType: 'json',
       success: function (data) {
         const select = $('#room_id');
-        select.append('<option value="">-- Yer Seçin --</option>');
+        select.append('<option value="">-- PLANET --</option>');
         data.forEach(function (item) {
           select.append(`<option value="${item.id}">${item.name}</option>`);
         });

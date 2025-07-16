@@ -29,7 +29,7 @@ try {
 
 <!-- Cam efektli ana konteyner -->
 <div class="glass-container p-4 mt-4 mb-5">
-  <p class="lead text-center mb-4" style="color: #ffb6c1; font-size: 1.5rem;">Welcome to Space</p>
+  <p class="lead text-center mb-4" style=" color: #ffd6fa; font-size: 1.5rem;">Welcome to Space</p>
 
   <div class="row justify-content-center">
     <div class="col-md-3 mb-4">

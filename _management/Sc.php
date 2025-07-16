@@ -143,4 +143,4 @@ public function redirectByRole()
             exit;
         }
     }
-}
+}         

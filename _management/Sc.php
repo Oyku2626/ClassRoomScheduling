@@ -85,6 +85,7 @@ class Sc
         }
 
         $_SESSION['auth'] = [
+            'id' => $response['id'],
             'email' => $email,
             'userType' => $response['role'] ?? 'user',
             'token' => $response['token']

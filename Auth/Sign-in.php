@@ -1,15 +1,5 @@
-<?php
-session_start();
-if (isset($_SESSION['auth']['userType'])) {
-    // Zaten giriş yapılmışsa rolüne göre ana sayfaya yönlendir
-    $userType = $_SESSION['auth']['userType'];
-    if ($userType === 'admin') {
-        header('Location: /ClassroomScheduling/Pages/Admin/Home.php');
-    } else {
-        header('Location: /ClassroomScheduling/Pages/User/Home.php');
-    }
-    exit;
-}
+
+
 ?>
 <!DOCTYPE html>
 <html lang="tr">

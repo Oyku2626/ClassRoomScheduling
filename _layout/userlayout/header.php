@@ -116,7 +116,7 @@ $page  = $route['page'];
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link d-flex align-items-center gap-2" href="../../Pages/User/MyReservation.php">
+                            <a class="nav-link d-flex align-items-center gap-2" href="../../Pages/User/MyReservations.php">
                                 <i class="fas fa-calendar"></i> My Reservations
                             </a>
                         </li>

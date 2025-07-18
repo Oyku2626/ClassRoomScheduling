@@ -224,7 +224,7 @@ Engine.UserNewReservation = function () {
             title: 'Başarılı',
             text: response.message || 'Rezervasyon kaydedildi.'
           }).then(() => {
-            window.location.href = 'reservations.php';
+            window.location.href = 'MyReservations.php';
           });
         } else {
           Swal.fire({
@@ -256,19 +256,13 @@ Engine.UserMyReservations = function () {
     $('#example2').DataTable().clear().destroy();
   }
 
-  
+
 
   $('#example2').DataTable({
     ajax: {
       url: '/room-scheduler/get-user-reservations.php?id=' + userId,
       type: 'GET',
-      dataSrc: '',
-      success : (res) => {
-        console.log(res);
-      },
-      error : (err) => {
-        //console.log(err);
-      }
+      dataSrc: ''
     },
     columns: [{
       data: 'date'

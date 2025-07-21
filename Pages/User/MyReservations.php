@@ -17,12 +17,18 @@
   .reservations-table th,
   .reservations-table td {
     padding: 12px 15px;
-    text-align: left;
+    text-align: left; /* tüm hücreler sola hizalı */
     border-bottom: 1px solid #e4b8ebff;
   }
 
+  /* DATE sütununu kesinlikle sola hizala */
+  .reservations-table th:first-child,
+  .reservations-table td:first-child {
+    text-align: left !important;
+  }
+
   .reservations-table thead {
-   background-color: rgba(60, 10, 100, 0.45);
+    background-color: rgba(60, 10, 100, 0.45);
     color: #4a4a4a;
   }
 
@@ -32,26 +38,27 @@
 
   h2.title {
     text-align: center;
-     color: #ffd6fa;
+    color: #ffd6fa;
     margin-top: 40px;
     margin-bottom: 20px;
   }
 </style>
 
 <div class="table-responsive">
-    <table id="example2" class="reservations-table">
-        <thead style="color:rgb(222, 29, 196);">
-        <tr>
-            <th>DATE</th>
-            <th>STRAT TIME</th>
-            <th>END TIME</th>
-            <th>STATUS</th>
-            <th>PLANET</th>
-            <th>EDIT</th>
-        </tr>
-        </thead>
-    </table>
+  <table id="example2" class="reservations-table">
+    <thead style="color:rgb(222, 29, 196);">
+      <tr>
+        <th>DATE</th>
+        <th>STRAT TIME</th>
+        <th>END TIME</th>
+        <th>STATUS</th>
+        <th>PLANET</th>
+        <th>EDIT</th>
+      </tr>
+    </thead>
+  </table>
 </div>
+
 
 <?php include '../../_layout/userlayout/footer.php'; ?>
 <script src="https://code.jquery.com/jquery-3.7.1.js"></script>

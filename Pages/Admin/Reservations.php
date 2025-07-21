@@ -1,11 +1,10 @@
 <?php
 include '../../_layout/adminlayout/header.php';
 require_once '../../../room-scheduler/dbo_test.php';
-
 $sql = "SELECT rr.id, rr.date, rr.start_time, rr.end_time, rr.status, rr.created_at, 
                l.name AS lecturer_name, r.name AS room_name
         FROM room_reservations rr
-        LEFT JOIN lecturers l ON rr.lecturer_id = l.id
+        JOIN lecturers l ON rr.lecturer_id = l.id
         JOIN rooms r ON rr.room_id = r.id
         ORDER BY rr.created_at DESC";
 $stmt = $pdo->query($sql);
